@@ -1,0 +1,16 @@
+.header-style {
+    height: 5vh;
+    width: 100vw;
+    background: lightgray;
+ }
+
+ .app-style {
+    width: 100vw;
+    height: 90vh;
+ }
+
+ .footer-style {
+    height: 5vh;
+    width: 100vw;
+    background: lightgray;
+ }
