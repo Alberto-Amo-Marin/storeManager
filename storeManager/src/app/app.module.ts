@@ -15,6 +15,9 @@ import {MatInputModule} from '@angular/material/input';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { FlexLayoutModule } from "@angular/flex-layout";
+
+
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
