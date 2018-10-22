@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainscreenComponent } from './mainScreen/mainscreen/mainscreen.component';
+import { MainscreenComponent, CUSTOM_DATE_FORMAT } from './mainScreen/mainscreen/mainscreen.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -20,9 +20,9 @@ import { FooterComponent } from './footer/footer.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MatNativeDateModule, DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 
-import { MatMomentDateModule } from "@angular/material-moment-adapter";
+import { MatMomentDateModule, MomentDateAdapter } from "@angular/material-moment-adapter";
 
 
 
@@ -50,7 +50,9 @@ import { MatMomentDateModule } from "@angular/material-moment-adapter";
     
     
   ],
-  providers: [],
+  providers: [{provide: DateAdapter, useClass: MomentDateAdapter},
+    {provide: MAT_DATE_FORMATS, useValue: CUSTOM_DATE_FORMAT},
+    {provide: MAT_DATE_LOCALE, useValue: 'es-ES'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
