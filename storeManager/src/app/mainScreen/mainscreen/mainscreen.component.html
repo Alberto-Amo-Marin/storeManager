@@ -34,17 +34,17 @@
         <div fxLayout="row" fxLayoutAlign="space-around center">
             <div>
                 <mat-form-field>
-                    <input matInput>
+                    <input matInput [(ngModel)]="val1">
                 </mat-form-field>
             </div>
             <div>
                 <mat-form-field>
-                    <input matInput>
+                    <input matInput [(ngModel)]="val2">
                 </mat-form-field>
             </div>
             <div>
                 <mat-form-field>
-                    <input matInput>
+                    <input matInput [(ngModel)]="val3">
                 </mat-form-field>
             </div>
             <div>
@@ -67,21 +67,21 @@
             </div>
             <div>
                 <mat-form-field>
-                    <input matInput value="0">
+                    <input matInput value="0" [(ngModel)]="val6">
                 </mat-form-field>
             </div>
             <div>
                 <mat-form-field style="width: 40%;">
-                    <input matInput placeholder="Precio" value="0">
+                    <input matInput placeholder="Precio" value="0" type="number" [(ngModel)]="val7">
                 </mat-form-field>
             </div>
             <div>
                 <mat-form-field style="width: 40%;">
-                    <input matInput placeholder="Cantidad" value="1">
+                    <input matInput placeholder="Cantidad" value="1" type="number" [(ngModel)]="val8">
                 </mat-form-field>
             </div>
             <div>
-                <button mat-raised-button color="primary">Añadir</button>
+                <button mat-raised-button color="primary" (click)="addData()">Añadir</button>
             </div>
         </div>
         <br>

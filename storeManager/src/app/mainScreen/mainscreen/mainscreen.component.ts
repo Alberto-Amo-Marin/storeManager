@@ -25,6 +25,18 @@ export interface Size {
   value: string;
 }
 
+export interface Data_Table {
+  val1: string;
+  val2: string;
+  val3: string;
+  val4: string;
+  val5: string;
+  val6: string;
+  val7: string;
+  val8: string;
+
+}
+
 @Component({
   selector: 'app-mainscreen',
   templateUrl: './mainscreen.component.html',
@@ -50,6 +62,8 @@ export class MainscreenComponent implements OnInit {
 
   ];
 
+  element_data: Data_Table [] = [];
+
   date = new Date();
   date2 =new FormControl(moment().format('DD/MM/YYYY'));
 
@@ -59,6 +73,10 @@ export class MainscreenComponent implements OnInit {
     //var date = new Date();
     //var date2 = new FormControl(moment(date,"DD/MM/YYYY"));
     //var date = new FormControl(moment([2017, 0, 1]));
+  }
+
+  addData(val1: string, val2: string, val3: string, val4: string, val5: string, val6: string, val7: string, val8: string) {
+    this.element_data.push({val1, val2, val3, val4, val5, val6, val7, val8});
   }
 
 }
