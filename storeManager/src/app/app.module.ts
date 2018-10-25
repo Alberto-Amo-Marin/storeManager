@@ -23,6 +23,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule, DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 
 import { MatMomentDateModule, MomentDateAdapter } from "@angular/material-moment-adapter";
+import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+
+
 
 
 
@@ -46,7 +50,9 @@ import { MatMomentDateModule, MomentDateAdapter } from "@angular/material-moment
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatButtonModule
     
     
   ],

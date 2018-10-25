@@ -1,77 +1,112 @@
 <div class="card-style">
     <mat-card class="mcard-style">
-    <div fxLayout="row" fxLayoutAlign="space-around center">
-        <div>
-            <mat-form-field style="width: 25%;">
-                <input matInput value="1" type="number">
-            </mat-form-field>
+        <br>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <div>
+                <mat-form-field style="width: 25%;">
+                    <input matInput value="1" type="number">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker3" placeholder="Fecha de venta" [(ngModel)]="date">
+                    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                    <mat-datepicker #picker3></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <input matInput placeholder="Número de ticket" value="9121" type="number">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <input matInput>
+                </mat-form-field>
+            </div>
         </div>
-        <div>
-            <mat-form-field>
-                <input matInput [matDatepicker]="picker3" placeholder="Fecha de venta" [(ngModel)]="date">
-                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
-                <mat-datepicker #picker3></mat-datepicker>
-            </mat-form-field>
+        <br>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <div>
+                <mat-form-field>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <mat-select placeholder="Color">
+                        <mat-option *ngFor="let color of colors" [value]="color.value">
+                            {{color.value}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                    <mat-form-field>
+                            <mat-select placeholder="Talla">
+                                <mat-option *ngFor="let size of sizes" [value]="size.value">
+                                    {{size.value}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <input matInput value="0">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field style="width: 40%;">
+                    <input matInput placeholder="Precio" value="0">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field style="width: 40%;">
+                    <input matInput placeholder="Cantidad" value="1">
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button color="primary">Añadir</button>
+            </div>
         </div>
-        <div>
-            <mat-form-field>
-                <input matInput placeholder="Número de ticket" value="9121" type="number">
-            </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field>
-                <input matInput>
-            </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field>
-                <input matInput>
-            </mat-form-field>
-        </div>
-    </div>
-
-    <div fxLayout="row" fxLayoutAlign="space-around center">
-        <div>
-            <mat-form-field>
-                <input matInput>
-            </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field>
-                <input matInput>
-            </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field>
-                <input matInput>
-            </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field>
-                <input matInput placeholder="Color" value="0">
-            </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field>
-                <input matInput placeholder="Talla" value="0">
-            </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field>
-                <input matInput value="0">
-            </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field>
-                <input matInput placeholder="Precio" value="0">
-            </mat-form-field>
-        </div>
-        <div>
-            <mat-form-field>
-                <input matInput placeholder="Cantidad" value="1">
-            </mat-form-field>
-        </div>
-
-    </div>
-</mat-card>
+        <br>
+        <table class="table-style">
+            <tr>
+                <th>Col1</th>
+                <th>Col2</th>
+                <th>Col3</th>
+                <th>Color</th>
+                <th>Talla</th>
+                <th>Col6</th>
+                <th>Col7</th>
+                <th>Col8</th>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>12</td>
+                <td>12</td>
+                <td>12</td>
+                <td>12</td>
+                <td>12</td>
+                <td>12</td>
+                <td>12</td>
+            </tr>
+            <tr>fila3</tr>
+        </table>
+    </mat-card>
 </div>

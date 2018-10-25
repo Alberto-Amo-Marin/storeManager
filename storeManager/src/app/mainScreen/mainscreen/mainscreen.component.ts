@@ -16,6 +16,15 @@ export const CUSTOM_DATE_FORMAT = {
   },
 };
 
+export interface Color {
+  value: string;
+  //viewValue: string;
+}
+
+export interface Size {
+  value: string;
+}
+
 @Component({
   selector: 'app-mainscreen',
   templateUrl: './mainscreen.component.html',
@@ -23,6 +32,24 @@ export const CUSTOM_DATE_FORMAT = {
   providers: [ ],
 })
 export class MainscreenComponent implements OnInit {
+  colors: Color[] = [
+    {value: 'Rojo'},
+    {value: 'Azul'},
+    {value: 'Verde'},
+    {value: 'Negro'},
+    {value: 'Blanco'},
+
+  ];
+
+  sizes: Size[] = [
+    {value: 'S'},
+    {value: 'M'},
+    {value: 'XL'},
+    {value: 'XXL'},
+    {value: 'XXL'},
+
+  ];
+
   date = new Date();
   date2 =new FormControl(moment().format('DD/MM/YYYY'));
 
